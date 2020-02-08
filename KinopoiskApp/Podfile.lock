@@ -1,3 +1,55 @@
-PODFILE CHECKSUM: 994e5e74692a01ccbaf4e12f1e6fbb7e64bc29eb
+PODS:
+  - Differentiator (3.1.0)
+  - Kingfisher (5.13.0):
+    - Kingfisher/Core (= 5.13.0)
+  - Kingfisher/Core (5.13.0)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxGesture (2.2.0):
+    - RxCocoa (~> 4.5)
+    - RxSwift (~> 4.5)
+  - RxSwift (4.5.0)
+  - SnapKit (4.0.1)
+
+DEPENDENCIES:
+  - Kingfisher
+  - R.swift (~> 5.0.3)
+  - RxCocoa (~> 4.0)
+  - RxDataSources (~> 3.0)
+  - RxGesture
+  - RxSwift
+  - SnapKit (~> 4.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - Kingfisher
+    - R.swift
+    - R.swift.Library
+    - RxCocoa
+    - RxDataSources
+    - RxGesture
+    - RxSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxGesture: c1b7bf17166b0ef9d642a9510f8bac5785f18990
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+
+PODFILE CHECKSUM: eaf9d75cf864e7a3b28f38fe2488702e21031745
 
 COCOAPODS: 1.8.4
