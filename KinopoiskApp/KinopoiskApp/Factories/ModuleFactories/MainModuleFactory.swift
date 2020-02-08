@@ -9,7 +9,7 @@
 import Foundation
 
 class MainModuleFactory: MainModuleFactoring {
-    func makeFilmsModule() -> BaseTableViewController {
-        return BaseTableViewController()
+    func makeFilmsModule() -> FilmsViewOutput & FilmsViewInput {
+        return FilmsViewController()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  MainModuleFactoring.swift
+//  FilmsViewModel.swift
 //  KinopoiskApp
 //
 //  Created by Nikita Yazikov on 08.02.2020.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol MainModuleFactoring {
-    func makeFilmsModule() -> FilmsViewOutput & FilmsViewInput
+class FilmsViewModel {
+    
 }

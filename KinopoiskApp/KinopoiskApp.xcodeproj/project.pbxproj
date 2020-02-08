@@ -29,6 +29,13 @@
 		71ED5F5E23EEB1A20045487F /* MainModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F5D23EEB1A20045487F /* MainModuleFactory.swift */; };
 		71ED5F6023EEF2E50045487F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F5F23EEF2E50045487F /* MainCoordinator.swift */; };
 		71ED5F6223EEF8C30045487F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6123EEF8C30045487F /* SceneDelegate.swift */; };
+		71ED5F6423EEFF370045487F /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6323EEFF370045487F /* FilmsViewController.swift */; };
+		71ED5F6623EEFF610045487F /* FilmsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6523EEFF610045487F /* FilmsViewInput.swift */; };
+		71ED5F6823EEFF750045487F /* FilmsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6723EEFF750045487F /* FilmsViewOutput.swift */; };
+		71ED5F6B23EEFF9F0045487F /* FilmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6A23EEFF9F0045487F /* FilmsViewModel.swift */; };
+		71ED5F6D23EF01000045487F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6C23EF01000045487F /* BaseView.swift */; };
+		71ED5F7023EF089C0045487F /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6F23EF089C0045487F /* APIProvider.swift */; };
+		71ED5F7223EF0AA00045487F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F7123EF0AA00045487F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +63,13 @@
 		71ED5F5D23EEB1A20045487F /* MainModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactory.swift; sourceTree = "<group>"; };
 		71ED5F5F23EEF2E50045487F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		71ED5F6123EEF8C30045487F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		71ED5F6323EEFF370045487F /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
+		71ED5F6523EEFF610045487F /* FilmsViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewInput.swift; sourceTree = "<group>"; };
+		71ED5F6723EEFF750045487F /* FilmsViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewOutput.swift; sourceTree = "<group>"; };
+		71ED5F6A23EEFF9F0045487F /* FilmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModel.swift; sourceTree = "<group>"; };
+		71ED5F6C23EF01000045487F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		71ED5F6F23EF089C0045487F /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		71ED5F7123EF0AA00045487F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.debug.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.release.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +116,7 @@
 		71ED5F1B23EE78F30045487F /* KinopoiskApp */ = {
 			isa = PBXGroup;
 			children = (
+				71ED5F6E23EF08130045487F /* Networking */,
 				71ED5F5523EEB0030045487F /* Flows */,
 				71ED5F5023EEAD600045487F /* Factories */,
 				71ED5F4923EEAB230045487F /* Router */,
@@ -140,6 +155,7 @@
 			children = (
 				71ED5F3B23EE812D0045487F /* Coordinatable.swift */,
 				71ED5F4723EEAAA10045487F /* Presentable.swift */,
+				71ED5F6C23EF01000045487F /* BaseView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -148,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				71ED5F3E23EE81950045487F /* ClosureTypealiases.swift */,
+				71ED5F7123EF0AA00045487F /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -218,6 +235,10 @@
 		71ED5F5823EEB0490045487F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				71ED5F6923EEFF8B0045487F /* ViewModel */,
+				71ED5F6323EEFF370045487F /* FilmsViewController.swift */,
+				71ED5F6523EEFF610045487F /* FilmsViewInput.swift */,
+				71ED5F6723EEFF750045487F /* FilmsViewOutput.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -238,6 +259,22 @@
 				71ED5F5D23EEB1A20045487F /* MainModuleFactory.swift */,
 			);
 			path = ModuleFactories;
+			sourceTree = "<group>";
+		};
+		71ED5F6923EEFF8B0045487F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				71ED5F6A23EEFF9F0045487F /* FilmsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		71ED5F6E23EF08130045487F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				71ED5F6F23EF089C0045487F /* APIProvider.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		C1499D6BF6B0E870B5095B84 /* Frameworks */ = {
@@ -364,20 +401,27 @@
 			files = (
 				71ED5F4523EE84200045487F /* BaseTableViewController.swift in Sources */,
 				71ED5F4B23EEAB390045487F /* Routerable.swift in Sources */,
+				71ED5F6423EEFF370045487F /* FilmsViewController.swift in Sources */,
 				71ED5F4F23EEAD210045487F /* ApplicationCoordinator.swift in Sources */,
 				71ED5F3923EE7FDC0045487F /* BaseViewController.swift in Sources */,
 				71ED5F3F23EE81950045487F /* ClosureTypealiases.swift in Sources */,
 				71ED5F4D23EEAB640045487F /* Router.swift in Sources */,
+				71ED5F7223EF0AA00045487F /* Constants.swift in Sources */,
+				71ED5F7023EF089C0045487F /* APIProvider.swift in Sources */,
 				71ED5F4823EEAAA10045487F /* Presentable.swift in Sources */,
 				71ED5F6023EEF2E50045487F /* MainCoordinator.swift in Sources */,
+				71ED5F6823EEFF750045487F /* FilmsViewOutput.swift in Sources */,
 				71ED5F1D23EE78F30045487F /* AppDelegate.swift in Sources */,
 				71ED5F3523EE7D720045487F /* UIViewExtensions.swift in Sources */,
+				71ED5F6623EEFF610045487F /* FilmsViewInput.swift in Sources */,
 				71ED5F5E23EEB1A20045487F /* MainModuleFactory.swift in Sources */,
 				71ED5F5423EEAE3B0045487F /* CoordinatorFactory.swift in Sources */,
+				71ED5F6D23EF01000045487F /* BaseView.swift in Sources */,
 				71ED5F5223EEAD7D0045487F /* CoordinatorFactoring.swift in Sources */,
 				71ED5F3223EE7D0C0045487F /* PrimaryView.swift in Sources */,
 				71ED5F5C23EEB1850045487F /* MainModuleFactoring.swift in Sources */,
 				71ED5F3723EE7DCD0045487F /* NSObjectExtension.swift in Sources */,
+				71ED5F6B23EEFF9F0045487F /* FilmsViewModel.swift in Sources */,
 				71ED5F6223EEF8C30045487F /* SceneDelegate.swift in Sources */,
 				71ED5F3C23EE812D0045487F /* Coordinatable.swift in Sources */,
 				71ED5F4123EE82CB0045487F /* BaseCoordinator.swift in Sources */,

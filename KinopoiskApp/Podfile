@@ -17,6 +17,9 @@ target 'KinopoiskApp' do
   pod 'RxDataSources', '~> 3.0'
   pod 'RxGesture'
   
+  # Networking
+  pod 'Moya/RxSwift', '~> 13.0'
+  
   # Autolayout
   pod 'SnapKit', '~> 4.0.0'
   

@@ -22,7 +22,8 @@ class MainCoordinator: BaseCoordinator {
     }
     
     private func showFilmsModule() {
-        let filmsModule = factory.makeFilmsModule()
+        var filmsModule = factory.makeFilmsModule()
+        filmsModule.viewModel = FilmsViewModel()
         router.setRootModule(filmsModule)
     }
 }
