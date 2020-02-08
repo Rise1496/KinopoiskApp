@@ -22,4 +22,8 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
             self?.showErrorAlertWith(message)
         }
     }
+    
+    override func setupUI() {
+        title = "Films.Controller.Title".localized
+    }
 }

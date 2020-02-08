@@ -21,6 +21,7 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setupBindings()
     }
     
@@ -39,6 +40,10 @@ class BaseViewController: UIViewController {
     // MARK: - Internal methodes
     
     func setupBindings() {
+        
+    }
+    
+    func setupUI() {
         
     }
     
