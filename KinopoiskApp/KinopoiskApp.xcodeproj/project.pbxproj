@@ -235,10 +235,7 @@
 		71ED5F5823EEB0490045487F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				71ED5F6923EEFF8B0045487F /* ViewModel */,
-				71ED5F6323EEFF370045487F /* FilmsViewController.swift */,
-				71ED5F6523EEFF610045487F /* FilmsViewInput.swift */,
-				71ED5F6723EEFF750045487F /* FilmsViewOutput.swift */,
+				71ED5F7323EF0F150045487F /* FilmsModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -275,6 +272,17 @@
 				71ED5F6F23EF089C0045487F /* APIProvider.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		71ED5F7323EF0F150045487F /* FilmsModule */ = {
+			isa = PBXGroup;
+			children = (
+				71ED5F6923EEFF8B0045487F /* ViewModel */,
+				71ED5F6323EEFF370045487F /* FilmsViewController.swift */,
+				71ED5F6523EEFF610045487F /* FilmsViewInput.swift */,
+				71ED5F6723EEFF750045487F /* FilmsViewOutput.swift */,
+			);
+			path = FilmsModule;
 			sourceTree = "<group>";
 		};
 		C1499D6BF6B0E870B5095B84 /* Frameworks */ = {

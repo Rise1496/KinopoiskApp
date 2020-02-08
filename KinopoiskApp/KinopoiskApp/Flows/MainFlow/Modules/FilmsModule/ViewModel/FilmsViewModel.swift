@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import Moya
 
 class FilmsViewModel {
+    private let provider: MoyaProvider<APIProvider>
     
+    init(provider: MoyaProvider<APIProvider>) {
+        self.provider = provider
+    }
 }

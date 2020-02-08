@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import Moya
 
 protocol CoordinatorFactoring {
     func makeMainCoordinator(factory: MainModuleFactoring,
-                             router: Routerable) -> MainCoordinator
+                             router: Routerable,
+                             provider: MoyaProvider<APIProvider>) -> MainCoordinator
 }

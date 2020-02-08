@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -24,7 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func makeCoordinator() -> Coordinatable {
         return ApplicationCoordinator(
             router: Router(rootController: rootNavigationController),
-            coordinatorFactory: CoordinatorFactory()
+            coordinatorFactory: CoordinatorFactory(),
+            provider: MoyaProvider<APIProvider>()
         )
     }
 

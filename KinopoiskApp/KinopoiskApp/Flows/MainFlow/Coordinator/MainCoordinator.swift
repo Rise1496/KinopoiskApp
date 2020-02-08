@@ -7,14 +7,18 @@
 //
 
 import Foundation
+import Moya
 
 class MainCoordinator: BaseCoordinator {
     private let factory: MainModuleFactoring
     private let router: Routerable
+    private let provider: MoyaProvider<APIProvider>
     
-    init(factory: MainModuleFactoring, router: Routerable) {
+    init(factory: MainModuleFactoring, router: Routerable,
+         provider: MoyaProvider<APIProvider>) {
         self.factory = factory
         self.router = router
+        self.provider = provider
     }
     
     override func start() {
@@ -23,7 +27,7 @@ class MainCoordinator: BaseCoordinator {
     
     private func showFilmsModule() {
         var filmsModule = factory.makeFilmsModule()
-        filmsModule.viewModel = FilmsViewModel()
+        filmsModule.viewModel = FilmsViewModel(provider: provider)
         router.setRootModule(filmsModule)
     }
 }
