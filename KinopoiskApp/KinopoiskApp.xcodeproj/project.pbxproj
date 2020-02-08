@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FB183C5328DCB00D1DDBB65 /* Pods_KinopoiskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C68D5F719F5E9504478B1F1 /* Pods_KinopoiskApp.framework */; };
 		71ED5F1D23EE78F30045487F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F1C23EE78F30045487F /* AppDelegate.swift */; };
 		71ED5F1F23EE78F30045487F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F1E23EE78F30045487F /* SceneDelegate.swift */; };
 		71ED5F2123EE78F30045487F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F2023EE78F30045487F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C68D5F719F5E9504478B1F1 /* Pods_KinopoiskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KinopoiskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71ED5F1923EE78F30045487F /* KinopoiskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinopoiskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71ED5F1C23EE78F30045487F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71ED5F1E23EE78F30045487F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		71ED5F2523EE78F40045487F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71ED5F2823EE78F40045487F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71ED5F2A23EE78F40045487F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.debug.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.release.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FB183C5328DCB00D1DDBB65 /* Pods_KinopoiskApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52BCE961FF02C9CC4D342546 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */,
+				C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		71ED5F1023EE78F30045487F = {
 			isa = PBXGroup;
 			children = (
 				71ED5F1B23EE78F30045487F /* KinopoiskApp */,
 				71ED5F1A23EE78F30045487F /* Products */,
+				52BCE961FF02C9CC4D342546 /* Pods */,
+				C1499D6BF6B0E870B5095B84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = KinopoiskApp;
 			sourceTree = "<group>";
 		};
+		C1499D6BF6B0E870B5095B84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C68D5F719F5E9504478B1F1 /* Pods_KinopoiskApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71ED5F2D23EE78F40045487F /* Build configuration list for PBXNativeTarget "KinopoiskApp" */;
 			buildPhases = (
+				9E86533008426F1D1AA6A441 /* [CP] Check Pods Manifest.lock */,
 				71ED5F1523EE78F30045487F /* Sources */,
 				71ED5F1623EE78F30045487F /* Frameworks */,
 				71ED5F1723EE78F30045487F /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E86533008426F1D1AA6A441 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KinopoiskApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71ED5F1523EE78F30045487F /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		71ED5F2E23EE78F40045487F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +351,7 @@
 		};
 		71ED5F2F23EE78F40045487F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
