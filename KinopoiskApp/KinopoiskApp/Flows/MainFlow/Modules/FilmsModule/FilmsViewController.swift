@@ -15,4 +15,11 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     // MARK: - FilmsViewOutput
     var onFilm: Action?
     
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.makeFilmsRequest { [weak self] (message) in
+            self?.showErrorAlertWith(message)
+        }
+    }
 }

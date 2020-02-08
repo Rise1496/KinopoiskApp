@@ -41,4 +41,12 @@ class BaseViewController: UIViewController {
     func setupBindings() {
         
     }
+    
+    // MARK: - showErrorAlert
+
+    func showErrorAlertWith(_ message: String) {
+        let alert = UIAlertController(title: "Alert.Title.Error".localized, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Alert.Button.OK".localized, style: .default) { _ in })
+        present(alert, animated: true, completion: nil)
+    }
 }

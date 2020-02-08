@@ -11,3 +11,7 @@ import Foundation
 struct APIConfig {
     static let filmsURL = "https://s3-eu-west-1.amazonaws.com"
 }
+
+extension String {
+    static let defaultErrorString = "Error"
+}

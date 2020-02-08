@@ -36,6 +36,11 @@
 		71ED5F6D23EF01000045487F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6C23EF01000045487F /* BaseView.swift */; };
 		71ED5F7023EF089C0045487F /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F6F23EF089C0045487F /* APIProvider.swift */; };
 		71ED5F7223EF0AA00045487F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F7123EF0AA00045487F /* Constants.swift */; };
+		71ED5F7623EF207B0045487F /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F7523EF207B0045487F /* FilmModel.swift */; };
+		71ED5F7823EF22E30045487F /* GetFilmsRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F7723EF22E30045487F /* GetFilmsRequestResult.swift */; };
+		71ED5F7B23EF24290045487F /* GetFilmsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F7A23EF24290045487F /* GetFilmsResponseModel.swift */; };
+		71ED5F7E23EF2EF20045487F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71ED5F8023EF2EF20045487F /* Localizable.strings */; };
+		71ED5F8423EF2F6C0045487F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F8323EF2F6C0045487F /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,13 @@
 		71ED5F6C23EF01000045487F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		71ED5F6F23EF089C0045487F /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		71ED5F7123EF0AA00045487F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		71ED5F7523EF207B0045487F /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
+		71ED5F7723EF22E30045487F /* GetFilmsRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilmsRequestResult.swift; sourceTree = "<group>"; };
+		71ED5F7A23EF24290045487F /* GetFilmsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFilmsResponseModel.swift; sourceTree = "<group>"; };
+		71ED5F7F23EF2EF20045487F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71ED5F8123EF2F040045487F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		71ED5F8223EF2F040045487F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		71ED5F8323EF2F6C0045487F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.debug.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.release.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +138,7 @@
 				71ED5F3323EE7D540045487F /* Extensions */,
 				71ED5F3023EE7CE30045487F /* Parents */,
 				71ED5F3A23EE81060045487F /* Protocols */,
+				71ED5F8023EF2EF20045487F /* Localizable.strings */,
 			);
 			path = KinopoiskApp;
 			sourceTree = "<group>";
@@ -146,6 +159,7 @@
 			children = (
 				71ED5F3423EE7D720045487F /* UIViewExtensions.swift */,
 				71ED5F3623EE7DCD0045487F /* NSObjectExtension.swift */,
+				71ED5F8323EF2F6C0045487F /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,6 +283,7 @@
 		71ED5F6E23EF08130045487F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				71ED5F7423EF204D0045487F /* Models */,
 				71ED5F6F23EF089C0045487F /* APIProvider.swift */,
 			);
 			path = Networking;
@@ -283,6 +298,24 @@
 				71ED5F6723EEFF750045487F /* FilmsViewOutput.swift */,
 			);
 			path = FilmsModule;
+			sourceTree = "<group>";
+		};
+		71ED5F7423EF204D0045487F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71ED5F7923EF23640045487F /* Films */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		71ED5F7923EF23640045487F /* Films */ = {
+			isa = PBXGroup;
+			children = (
+				71ED5F7523EF207B0045487F /* FilmModel.swift */,
+				71ED5F7723EF22E30045487F /* GetFilmsRequestResult.swift */,
+				71ED5F7A23EF24290045487F /* GetFilmsResponseModel.swift */,
+			);
+			path = Films;
 			sourceTree = "<group>";
 		};
 		C1499D6BF6B0E870B5095B84 /* Frameworks */ = {
@@ -337,6 +370,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 71ED5F1023EE78F30045487F;
 			productRefGroup = 71ED5F1A23EE78F30045487F /* Products */;
@@ -354,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71ED5F2923EE78F40045487F /* LaunchScreen.storyboard in Resources */,
+				71ED5F7E23EF2EF20045487F /* Localizable.strings in Resources */,
 				71ED5F2623EE78F40045487F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +446,7 @@
 				71ED5F4B23EEAB390045487F /* Routerable.swift in Sources */,
 				71ED5F6423EEFF370045487F /* FilmsViewController.swift in Sources */,
 				71ED5F4F23EEAD210045487F /* ApplicationCoordinator.swift in Sources */,
+				71ED5F7623EF207B0045487F /* FilmModel.swift in Sources */,
 				71ED5F3923EE7FDC0045487F /* BaseViewController.swift in Sources */,
 				71ED5F3F23EE81950045487F /* ClosureTypealiases.swift in Sources */,
 				71ED5F4D23EEAB640045487F /* Router.swift in Sources */,
@@ -418,6 +454,7 @@
 				71ED5F7023EF089C0045487F /* APIProvider.swift in Sources */,
 				71ED5F4823EEAAA10045487F /* Presentable.swift in Sources */,
 				71ED5F6023EEF2E50045487F /* MainCoordinator.swift in Sources */,
+				71ED5F8423EF2F6C0045487F /* StringExtensions.swift in Sources */,
 				71ED5F6823EEFF750045487F /* FilmsViewOutput.swift in Sources */,
 				71ED5F1D23EE78F30045487F /* AppDelegate.swift in Sources */,
 				71ED5F3523EE7D720045487F /* UIViewExtensions.swift in Sources */,
@@ -431,6 +468,8 @@
 				71ED5F3723EE7DCD0045487F /* NSObjectExtension.swift in Sources */,
 				71ED5F6B23EEFF9F0045487F /* FilmsViewModel.swift in Sources */,
 				71ED5F6223EEF8C30045487F /* SceneDelegate.swift in Sources */,
+				71ED5F7823EF22E30045487F /* GetFilmsRequestResult.swift in Sources */,
+				71ED5F7B23EF24290045487F /* GetFilmsResponseModel.swift in Sources */,
 				71ED5F3C23EE812D0045487F /* Coordinatable.swift in Sources */,
 				71ED5F4123EE82CB0045487F /* BaseCoordinator.swift in Sources */,
 			);
@@ -443,8 +482,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				71ED5F2823EE78F40045487F /* Base */,
+				71ED5F8123EF2F040045487F /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		71ED5F8023EF2EF20045487F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71ED5F7F23EF2EF20045487F /* en */,
+				71ED5F8223EF2F040045487F /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -454,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -514,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

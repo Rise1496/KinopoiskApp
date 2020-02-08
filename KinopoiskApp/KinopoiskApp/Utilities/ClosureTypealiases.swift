@@ -9,3 +9,4 @@
 import Foundation
 
 typealias Action = () -> Void
+typealias StringAction = (String) -> Void
