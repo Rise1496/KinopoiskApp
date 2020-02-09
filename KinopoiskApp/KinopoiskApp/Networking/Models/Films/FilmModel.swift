@@ -10,9 +10,9 @@ import Foundation
 
 struct FilmModel: Codable {
     let id: Int?
-    let localized_name: String?
-    let name: String?
-    let year: Int?
+    let localized_name: String
+    let name: String
+    let year: Int
     let rating: Double?
     let image_url: String?
     let description: String?

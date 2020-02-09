@@ -44,6 +44,15 @@
 		71F15FAA23EFE44700F52224 /* FilmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */; };
 		71F15FAB23EFE44700F52224 /* FilmsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */; };
 		71F15FAF23EFF0FA00F52224 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FAE23EFF0FA00F52224 /* R.generated.swift */; };
+		71F15FB923EFF4CC00F52224 /* SegoeUISemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FB323EFF4CC00F52224 /* SegoeUISemiBold.ttf */; };
+		71F15FBA23EFF4CC00F52224 /* SegoeUIBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FB423EFF4CC00F52224 /* SegoeUIBold.ttf */; };
+		71F15FBB23EFF4CC00F52224 /* FiraSansRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FB523EFF4CC00F52224 /* FiraSansRegular.ttf */; };
+		71F15FBC23EFF4CC00F52224 /* SegoeUIItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FB623EFF4CC00F52224 /* SegoeUIItalic.ttf */; };
+		71F15FBD23EFF4CC00F52224 /* SegoeUILight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FB723EFF4CC00F52224 /* SegoeUILight.ttf */; };
+		71F15FBE23EFF4CC00F52224 /* SegoeUIRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FB823EFF4CC00F52224 /* SegoeUIRegular.ttf */; };
+		71F15FC023EFF73800F52224 /* FilmsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FBF23EFF73800F52224 /* FilmsCellViewModel.swift */; };
+		71F15FC223EFF97800F52224 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FC123EFF97800F52224 /* UILabelExtensions.swift */; };
+		71F15FC423EFFA1900F52224 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FC323EFFA1900F52224 /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +97,15 @@
 		71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableViewCell.swift; sourceTree = "<group>"; };
 		71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmsTableViewCell.xib; sourceTree = "<group>"; };
 		71F15FAE23EFF0FA00F52224 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		71F15FB323EFF4CC00F52224 /* SegoeUISemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegoeUISemiBold.ttf; sourceTree = "<group>"; };
+		71F15FB423EFF4CC00F52224 /* SegoeUIBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegoeUIBold.ttf; sourceTree = "<group>"; };
+		71F15FB523EFF4CC00F52224 /* FiraSansRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FiraSansRegular.ttf; sourceTree = "<group>"; };
+		71F15FB623EFF4CC00F52224 /* SegoeUIItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegoeUIItalic.ttf; sourceTree = "<group>"; };
+		71F15FB723EFF4CC00F52224 /* SegoeUILight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegoeUILight.ttf; sourceTree = "<group>"; };
+		71F15FB823EFF4CC00F52224 /* SegoeUIRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SegoeUIRegular.ttf; sourceTree = "<group>"; };
+		71F15FBF23EFF73800F52224 /* FilmsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsCellViewModel.swift; sourceTree = "<group>"; };
+		71F15FC123EFF97800F52224 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		71F15FC323EFFA1900F52224 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.debug.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.release.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +184,8 @@
 				71ED5F3423EE7D720045487F /* UIViewExtensions.swift */,
 				71ED5F3623EE7DCD0045487F /* NSObjectExtension.swift */,
 				71ED5F8323EF2F6C0045487F /* StringExtensions.swift */,
+				71F15FC123EFF97800F52224 /* UILabelExtensions.swift */,
+				71F15FC323EFFA1900F52224 /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,6 +222,7 @@
 		71ED5F4323EE83C70045487F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				71F15FB223EFF4B500F52224 /* Fonts */,
 				71F15FAE23EFF0FA00F52224 /* R.generated.swift */,
 				71ED5F2723EE78F40045487F /* LaunchScreen.storyboard */,
 				71ED5F2A23EE78F40045487F /* Info.plist */,
@@ -331,8 +352,22 @@
 			children = (
 				71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */,
 				71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */,
+				71F15FBF23EFF73800F52224 /* FilmsCellViewModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		71F15FB223EFF4B500F52224 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				71F15FB523EFF4CC00F52224 /* FiraSansRegular.ttf */,
+				71F15FB423EFF4CC00F52224 /* SegoeUIBold.ttf */,
+				71F15FB623EFF4CC00F52224 /* SegoeUIItalic.ttf */,
+				71F15FB723EFF4CC00F52224 /* SegoeUILight.ttf */,
+				71F15FB823EFF4CC00F52224 /* SegoeUIRegular.ttf */,
+				71F15FB323EFF4CC00F52224 /* SegoeUISemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C1499D6BF6B0E870B5095B84 /* Frameworks */ = {
@@ -405,10 +440,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F15FBB23EFF4CC00F52224 /* FiraSansRegular.ttf in Resources */,
+				71F15FBC23EFF4CC00F52224 /* SegoeUIItalic.ttf in Resources */,
+				71F15FB923EFF4CC00F52224 /* SegoeUISemiBold.ttf in Resources */,
+				71F15FBA23EFF4CC00F52224 /* SegoeUIBold.ttf in Resources */,
+				71F15FBD23EFF4CC00F52224 /* SegoeUILight.ttf in Resources */,
 				71ED5F2923EE78F40045487F /* LaunchScreen.storyboard in Resources */,
 				71F15FAB23EFE44700F52224 /* FilmsTableViewCell.xib in Resources */,
 				71ED5F7E23EF2EF20045487F /* Localizable.strings in Resources */,
 				71ED5F2623EE78F40045487F /* Assets.xcassets in Resources */,
+				71F15FBE23EFF4CC00F52224 /* SegoeUIRegular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +525,7 @@
 				71ED5F4B23EEAB390045487F /* Routerable.swift in Sources */,
 				71ED5F6423EEFF370045487F /* FilmsViewController.swift in Sources */,
 				71ED5F4F23EEAD210045487F /* ApplicationCoordinator.swift in Sources */,
+				71F15FC223EFF97800F52224 /* UILabelExtensions.swift in Sources */,
 				71ED5F7623EF207B0045487F /* FilmModel.swift in Sources */,
 				71ED5F3923EE7FDC0045487F /* BaseViewController.swift in Sources */,
 				71ED5F3F23EE81950045487F /* ClosureTypealiases.swift in Sources */,
@@ -501,12 +543,14 @@
 				71ED5F5E23EEB1A20045487F /* MainModuleFactory.swift in Sources */,
 				71ED5F5423EEAE3B0045487F /* CoordinatorFactory.swift in Sources */,
 				71ED5F6D23EF01000045487F /* BaseView.swift in Sources */,
+				71F15FC023EFF73800F52224 /* FilmsCellViewModel.swift in Sources */,
 				71ED5F5223EEAD7D0045487F /* CoordinatorFactoring.swift in Sources */,
 				71ED5F3223EE7D0C0045487F /* PrimaryView.swift in Sources */,
 				71ED5F5C23EEB1850045487F /* MainModuleFactoring.swift in Sources */,
 				71ED5F3723EE7DCD0045487F /* NSObjectExtension.swift in Sources */,
 				71ED5F6B23EEFF9F0045487F /* FilmsViewModel.swift in Sources */,
 				71ED5F6223EEF8C30045487F /* SceneDelegate.swift in Sources */,
+				71F15FC423EFFA1900F52224 /* UIColorExtensions.swift in Sources */,
 				71F15FAF23EFF0FA00F52224 /* R.generated.swift in Sources */,
 				71ED5F7823EF22E30045487F /* GetFilmsRequestResult.swift in Sources */,
 				71ED5F7B23EF24290045487F /* GetFilmsResponseModel.swift in Sources */,
