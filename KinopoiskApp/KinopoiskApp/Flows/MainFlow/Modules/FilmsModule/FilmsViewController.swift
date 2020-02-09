@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+import RxDataSources
+import Rswift
 
 class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOutput {
     // MARK: - FilmsViewInput
@@ -23,7 +27,32 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
         }
     }
     
+    override func registerCells() {
+        tableView.register(UINib(nibName: R.nib.filmsTableViewCell.identifier, bundle: nil),
+                           forCellReuseIdentifier: R.nib.filmsTableViewCell.identifier)
+    }
+    
+    override func setupBindings() {
+        viewModel.sections
+            .bind(to: tableView.rx.items(dataSource: dataSource()))
+            .disposed(by: disposeBag)
+    }
+    
     override func setupUI() {
         title = "Films.Controller.Title".localized
+    }
+    
+    private func dataSource() -> RxTableViewSectionedReloadDataSource<FilmsSectionModel> {
+        return RxTableViewSectionedReloadDataSource<FilmsSectionModel>(configureCell: { (_, tableView, indexPath, item) -> UITableViewCell in
+            switch item {
+            case .filmItem(let cellViewModel):
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.filmsTableViewCell.identifier, for: indexPath)
+                    as? FilmsTableViewCell else {
+                        fatalError("Cell is not of kind \(FilmsTableViewCell.nameOfClass)")
+                }
+                cell.configure(with: cellViewModel)
+                return cell
+            }
+        })
     }
 }

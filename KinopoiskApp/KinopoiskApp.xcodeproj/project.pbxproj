@@ -53,6 +53,7 @@
 		71F15FC023EFF73800F52224 /* FilmsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FBF23EFF73800F52224 /* FilmsCellViewModel.swift */; };
 		71F15FC223EFF97800F52224 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FC123EFF97800F52224 /* UILabelExtensions.swift */; };
 		71F15FC423EFFA1900F52224 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FC323EFFA1900F52224 /* UIColorExtensions.swift */; };
+		71F15FC623F0009500F52224 /* FilmsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FC523F0009500F52224 /* FilmsSectionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		71F15FBF23EFF73800F52224 /* FilmsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsCellViewModel.swift; sourceTree = "<group>"; };
 		71F15FC123EFF97800F52224 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		71F15FC323EFFA1900F52224 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		71F15FC523F0009500F52224 /* FilmsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsSectionModel.swift; sourceTree = "<group>"; };
 		7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.debug.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.release.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				71ED5F6A23EEFF9F0045487F /* FilmsViewModel.swift */,
+				71F15FC523F0009500F52224 /* FilmsSectionModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				71ED5F4D23EEAB640045487F /* Router.swift in Sources */,
 				71ED5F7223EF0AA00045487F /* Constants.swift in Sources */,
 				71ED5F7023EF089C0045487F /* APIProvider.swift in Sources */,
+				71F15FC623F0009500F52224 /* FilmsSectionModel.swift in Sources */,
 				71ED5F4823EEAAA10045487F /* Presentable.swift in Sources */,
 				71F15FAA23EFE44700F52224 /* FilmsTableViewCell.swift in Sources */,
 				71ED5F6023EEF2E50045487F /* MainCoordinator.swift in Sources */,
