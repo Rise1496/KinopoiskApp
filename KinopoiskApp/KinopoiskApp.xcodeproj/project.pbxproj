@@ -43,6 +43,7 @@
 		71ED5F8423EF2F6C0045487F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F8323EF2F6C0045487F /* StringExtensions.swift */; };
 		71F15FAA23EFE44700F52224 /* FilmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */; };
 		71F15FAB23EFE44700F52224 /* FilmsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */; };
+		71F15FAF23EFF0FA00F52224 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FAE23EFF0FA00F52224 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		71ED5F8323EF2F6C0045487F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableViewCell.swift; sourceTree = "<group>"; };
 		71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmsTableViewCell.xib; sourceTree = "<group>"; };
+		71F15FAE23EFF0FA00F52224 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.debug.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.release.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,6 +202,7 @@
 		71ED5F4323EE83C70045487F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				71F15FAE23EFF0FA00F52224 /* R.generated.swift */,
 				71ED5F2723EE78F40045487F /* LaunchScreen.storyboard */,
 				71ED5F2A23EE78F40045487F /* Info.plist */,
 				71ED5F2523EE78F40045487F /* Assets.xcassets */,
@@ -348,6 +351,7 @@
 			buildConfigurationList = 71ED5F2D23EE78F40045487F /* Build configuration list for PBXNativeTarget "KinopoiskApp" */;
 			buildPhases = (
 				9E86533008426F1D1AA6A441 /* [CP] Check Pods Manifest.lock */,
+				71F15FAD23EFEF2B00F52224 /* ShellScript */,
 				71ED5F1523EE78F30045487F /* Sources */,
 				71ED5F1623EE78F30045487F /* Frameworks */,
 				71ED5F1723EE78F30045487F /* Resources */,
@@ -411,6 +415,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		71F15FAD23EFEF2B00F52224 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		9DA000C92C177D91E50D515E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,6 +507,7 @@
 				71ED5F3723EE7DCD0045487F /* NSObjectExtension.swift in Sources */,
 				71ED5F6B23EEFF9F0045487F /* FilmsViewModel.swift in Sources */,
 				71ED5F6223EEF8C30045487F /* SceneDelegate.swift in Sources */,
+				71F15FAF23EFF0FA00F52224 /* R.generated.swift in Sources */,
 				71ED5F7823EF22E30045487F /* GetFilmsRequestResult.swift in Sources */,
 				71ED5F7B23EF24290045487F /* GetFilmsResponseModel.swift in Sources */,
 				71ED5F3C23EE812D0045487F /* Coordinatable.swift in Sources */,
