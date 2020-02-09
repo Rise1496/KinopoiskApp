@@ -28,6 +28,15 @@ class MainCoordinator: BaseCoordinator {
     private func showFilmsModule() {
         var filmsModule = factory.makeFilmsModule()
         filmsModule.viewModel = FilmsViewModel(provider: provider)
+        filmsModule.onFilm = { [weak self] film in
+            self?.showFilmInfoModule(film: film)
+        }
         router.setRootModule(filmsModule)
+    }
+    
+    private func showFilmInfoModule(film: FilmModel) {
+        var filmInfoModule = factory.makeFilmInfoModule()
+        filmInfoModule.viewModel = FilmInfoViewModel(film: film)
+        router.push(filmInfoModule)
     }
 }

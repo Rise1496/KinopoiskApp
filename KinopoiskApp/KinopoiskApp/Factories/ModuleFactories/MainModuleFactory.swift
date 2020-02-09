@@ -12,4 +12,8 @@ class MainModuleFactory: MainModuleFactoring {
     func makeFilmsModule() -> FilmsViewOutput & FilmsViewInput {
         return FilmsViewController()
     }
+    
+    func makeFilmInfoModule() -> FilmInfoViewInput & FilmInfoViewOutput {
+        return FilmInfoViewController()
+    }
 }

@@ -10,4 +10,5 @@ import Foundation
 
 protocol MainModuleFactoring {
     func makeFilmsModule() -> FilmsViewOutput & FilmsViewInput
+    func makeFilmInfoModule() -> FilmInfoViewInput & FilmInfoViewOutput
 }
