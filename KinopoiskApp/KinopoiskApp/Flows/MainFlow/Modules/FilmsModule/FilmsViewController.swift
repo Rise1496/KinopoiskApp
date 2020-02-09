@@ -33,6 +33,7 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     }
     
     override func setupBindings() {
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
         viewModel.sections
             .bind(to: tableView.rx.items(dataSource: dataSource()))
             .disposed(by: disposeBag)
@@ -54,5 +55,17 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
                 return cell
             }
         })
+    }
+}
+
+extension FilmsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.applyFilmsSectionDesign(title: viewModel.getSectionTitle(sectionIndex: section))
+        return label
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60.0
     }
 }

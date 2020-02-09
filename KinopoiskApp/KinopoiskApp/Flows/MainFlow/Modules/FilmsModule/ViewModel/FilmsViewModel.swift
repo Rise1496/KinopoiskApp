@@ -36,15 +36,29 @@ class FilmsViewModel {
         }).disposed(by: disposeBag)
     }
     
-    private func configureSections(films: [FilmModel]) {
-        var items = [FilmsSectionItem]()
-        for film in films {
-            items.append(FilmsSectionItem.filmItem(cellViewModel:
-                FilmsCellViewModel(localized_name: film.localized_name,
-                                   name: film.name, year: film.year,
-                                   rating: film.rating)))
+    func getSectionTitle(sectionIndex: Int) -> String {
+        switch sections.value[sectionIndex] {
+        case .filmsItemSection(_, let year):
+            return String(year)
         }
-        sections.accept([FilmsSectionModel.filmsItemSection(items: items)])
+    }
+    
+    private func configureSections(films: [FilmModel]) {
+        var yearsSections = [FilmsSectionModel]()
+        let groupedDictionary = Dictionary(grouping: films) { (film) -> Int in
+            return film.year
+        }
+        let keys = groupedDictionary.keys.sorted()
+        keys.forEach({
+            var sectionItems = [FilmsSectionItem]()
+            groupedDictionary[$0]?.forEach({ (film) in
+                sectionItems.append(FilmsSectionItem.filmItem(cellViewModel:
+                    FilmsCellViewModel(film: film)))
+            })
+            yearsSections.append(FilmsSectionModel.filmsItemSection(items: sectionItems,
+                                                                    year: $0))
+        })
+        sections.accept(yearsSections)
     }
 }
 

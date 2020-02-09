@@ -10,7 +10,7 @@ import Foundation
 import RxDataSources
 
 enum FilmsSectionModel {
-    case filmsItemSection(items: [FilmsSectionItem])
+    case filmsItemSection(items: [FilmsSectionItem], year: Int)
 }
 
 extension FilmsSectionModel: SectionModelType {
@@ -18,15 +18,15 @@ extension FilmsSectionModel: SectionModelType {
     
     var items: [Item] {
         switch self {
-        case .filmsItemSection(let items):
+        case .filmsItemSection(let items, _):
             return items.map { $0 }
         }
     }
     
     init(original: FilmsSectionModel, items: [FilmsSectionItem]) {
         switch original {
-        case .filmsItemSection(let items):
-            self = .filmsItemSection(items: items)
+        case .filmsItemSection(let items, let year):
+            self = .filmsItemSection(items: items, year: year)
         }
     }
 }

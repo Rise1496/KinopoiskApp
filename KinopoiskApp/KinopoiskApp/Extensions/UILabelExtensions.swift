@@ -22,4 +22,10 @@ extension UILabel {
         }
         self.textColor = .highScoreColor
     }
+    
+    func applyFilmsSectionDesign(title: String) {
+        self.text = title
+        self.backgroundColor = .gray
+        self.textAlignment = .center
+    }
 }

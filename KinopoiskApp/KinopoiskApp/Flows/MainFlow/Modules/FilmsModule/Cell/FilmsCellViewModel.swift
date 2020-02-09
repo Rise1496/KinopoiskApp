@@ -9,8 +9,5 @@
 import Foundation
 
 struct FilmsCellViewModel {
-    let localized_name: String
-    let name: String
-    let year: Int?
-    let rating: Double?
+    let film: FilmModel
 }

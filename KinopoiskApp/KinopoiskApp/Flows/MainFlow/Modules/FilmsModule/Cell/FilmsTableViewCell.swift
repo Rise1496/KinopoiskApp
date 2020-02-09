@@ -41,9 +41,9 @@ class FilmsTableViewCell: UITableViewCell {
     }
     
     func configure(with viewModel: FilmsCellViewModel) {
-        titleLabel.text = viewModel.localized_name
-        subtitleLabel.text = viewModel.name
-        if let score = viewModel.rating {
+        titleLabel.text = viewModel.film.localized_name
+        subtitleLabel.text = viewModel.film.name
+        if let score = viewModel.film.rating {
             scoreLabel.configureScoreLabel(with: score)
         } else {
             scoreLabel.text = ""
