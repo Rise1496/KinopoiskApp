@@ -14,6 +14,7 @@ class FilmsTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel! {
         didSet {
             titleLabel.textAlignment = .left
+            titleLabel.numberOfLines = 2
             titleLabel.font = R.font.segoeUISemiBold(size: 17.0)
         }
     }
@@ -28,6 +29,7 @@ class FilmsTableViewCell: UITableViewCell {
     @IBOutlet private weak var subtitleLabel: UILabel! {
         didSet {
             subtitleLabel.textAlignment = .left
+            subtitleLabel.numberOfLines = 2
             subtitleLabel.font = R.font.segoeUI(size: 15.0)
             subtitleLabel.textColor = .gray
         }

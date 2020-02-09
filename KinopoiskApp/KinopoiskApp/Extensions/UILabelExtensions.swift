@@ -12,11 +12,11 @@ import Rswift
 extension UILabel {
     func configureScoreLabel(with score: Double) {
         self.text = String(score)
-        guard score < 5.0 else {
+        guard score >= 5.0 else {
             self.textColor = .lowScoreColor
             return
         }
-        guard score < 7.0 else {
+        guard score >= 7.0 else {
             self.textColor = .middleScoreColor
             return
         }
