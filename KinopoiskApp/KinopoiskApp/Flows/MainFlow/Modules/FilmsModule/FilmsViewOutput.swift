@@ -9,5 +9,5 @@
 import Foundation
 
 protocol FilmsViewOutput: BaseView {
-    var onFilm: Action? { get set }
+    var onFilm: FilmAction? { get set }
 }

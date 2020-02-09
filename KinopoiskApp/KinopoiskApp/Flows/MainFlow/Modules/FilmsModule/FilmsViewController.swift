@@ -17,7 +17,7 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     var viewModel: FilmsViewModel!
     
     // MARK: - FilmsViewOutput
-    var onFilm: Action?
+    var onFilm: FilmAction?
     
     // MARK: - Lifecycle
     
@@ -35,9 +35,24 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     
     override func setupBindings() {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
         viewModel.sections
             .bind(to: tableView.rx.items(dataSource: dataSource()))
             .disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(FilmsSectionItem.self).subscribe ({ [weak self] (item) in
+            guard let cellVM = item.element else {
+                return
+            }
+            switch cellVM {
+            case .filmItem(let cellViewModel):
+                self?.onFilm?(cellViewModel.film)
+            }
+        }).disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected.subscribe(onNext: { [weak self] (indexPath) in
+            self?.tableView.deselectRow(at: indexPath, animated: true)
+        }).disposed(by: disposeBag)
     }
     
     override func setupUI() {
