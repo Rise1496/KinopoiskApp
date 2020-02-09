@@ -10,8 +10,13 @@ import UIKit
 import Rswift
 
 extension UILabel {
-    func configureScoreLabel(with score: Double) {
-        self.text = String(score)
+    func configureScoreLabel(with score: Double,
+                             needsDescription: Bool = false) {
+        if needsDescription {
+            self.text = "FilmInfo.Cell.Score".localized + String(score)
+        } else {
+           self.text = String(score)
+        }
         guard score >= 5.0 else {
             self.textColor = .lowScoreColor
             return

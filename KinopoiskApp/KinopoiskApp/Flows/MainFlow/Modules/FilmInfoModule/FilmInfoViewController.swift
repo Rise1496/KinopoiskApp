@@ -7,8 +7,36 @@
 //
 
 import UIKit
+import Rswift
 
 class FilmInfoViewController: BaseTableViewController, FilmInfoViewInput, FilmInfoViewOutput {
     var viewModel: FilmInfoViewModel!
     
+    override func setupUI() {
+        title = viewModel.getTitle()
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.refreshControl = nil
+    }
+    
+    override func registerCells() {
+        tableView.register(UINib(nibName: R.nib.filmInfoTableViewCell.identifier, bundle: nil),
+                           forCellReuseIdentifier: R.nib.filmInfoTableViewCell.identifier)
+    }
+}
+
+extension FilmInfoViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:
+            R.nib.filmInfoTableViewCell.identifier, for: indexPath)
+            as? FilmInfoTableViewCell else {
+                fatalError("Cell is not of kind \(FilmInfoTableViewCell.nameOfClass)")
+        }
+        cell.configure(with: viewModel.makeCellViewModel())
+        return cell
+    }
 }

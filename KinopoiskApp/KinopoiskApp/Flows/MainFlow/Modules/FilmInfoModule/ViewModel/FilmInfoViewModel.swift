@@ -14,4 +14,12 @@ class FilmInfoViewModel {
     init(film: FilmModel) {
         self.film = film
     }
+    
+    func getTitle() -> String {
+        return film.localized_name
+    }
+    
+    func makeCellViewModel() -> FilmInfoCellViewModel {
+        return FilmInfoCellViewModel(film: film)
+    }
 }

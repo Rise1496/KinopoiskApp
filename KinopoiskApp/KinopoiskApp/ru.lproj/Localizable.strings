@@ -9,3 +9,5 @@
 "Alert.Title.Error" = "Ошибка";
 "Alert.Button.OK" = "Ок";
 "Films.Controller.Title" = "Фильмы";
+"FilmInfo.Cell.Year" = "Год: ";
+"FilmInfo.Cell.Score" = "Рейтинг: ";
