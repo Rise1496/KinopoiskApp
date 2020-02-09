@@ -41,6 +41,8 @@
 		71ED5F7B23EF24290045487F /* GetFilmsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F7A23EF24290045487F /* GetFilmsResponseModel.swift */; };
 		71ED5F7E23EF2EF20045487F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71ED5F8023EF2EF20045487F /* Localizable.strings */; };
 		71ED5F8423EF2F6C0045487F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ED5F8323EF2F6C0045487F /* StringExtensions.swift */; };
+		71F15FAA23EFE44700F52224 /* FilmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */; };
+		71F15FAB23EFE44700F52224 /* FilmsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		71ED5F8123EF2F040045487F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		71ED5F8223EF2F040045487F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71ED5F8323EF2F6C0045487F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsTableViewCell.swift; sourceTree = "<group>"; };
+		71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilmsTableViewCell.xib; sourceTree = "<group>"; };
 		7490393C4F74FCA9EB331F00 /* Pods-KinopoiskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.debug.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C4FE358E498E5AE9DF5CE6A2 /* Pods-KinopoiskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KinopoiskApp.release.xcconfig"; path = "Target Support Files/Pods-KinopoiskApp/Pods-KinopoiskApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -292,6 +296,7 @@
 		71ED5F7323EF0F150045487F /* FilmsModule */ = {
 			isa = PBXGroup;
 			children = (
+				71F15FA723EFE40200F52224 /* Cell */,
 				71ED5F6923EEFF8B0045487F /* ViewModel */,
 				71ED5F6323EEFF370045487F /* FilmsViewController.swift */,
 				71ED5F6523EEFF610045487F /* FilmsViewInput.swift */,
@@ -316,6 +321,15 @@
 				71ED5F7A23EF24290045487F /* GetFilmsResponseModel.swift */,
 			);
 			path = Films;
+			sourceTree = "<group>";
+		};
+		71F15FA723EFE40200F52224 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				71F15FA823EFE44700F52224 /* FilmsTableViewCell.swift */,
+				71F15FA923EFE44700F52224 /* FilmsTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C1499D6BF6B0E870B5095B84 /* Frameworks */ = {
@@ -388,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71ED5F2923EE78F40045487F /* LaunchScreen.storyboard in Resources */,
+				71F15FAB23EFE44700F52224 /* FilmsTableViewCell.xib in Resources */,
 				71ED5F7E23EF2EF20045487F /* Localizable.strings in Resources */,
 				71ED5F2623EE78F40045487F /* Assets.xcassets in Resources */,
 			);
@@ -453,6 +468,7 @@
 				71ED5F7223EF0AA00045487F /* Constants.swift in Sources */,
 				71ED5F7023EF089C0045487F /* APIProvider.swift in Sources */,
 				71ED5F4823EEAAA10045487F /* Presentable.swift in Sources */,
+				71F15FAA23EFE44700F52224 /* FilmsTableViewCell.swift in Sources */,
 				71ED5F6023EEF2E50045487F /* MainCoordinator.swift in Sources */,
 				71ED5F8423EF2F6C0045487F /* StringExtensions.swift in Sources */,
 				71ED5F6823EEFF750045487F /* FilmsViewOutput.swift in Sources */,
