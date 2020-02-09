@@ -20,11 +20,12 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     var onFilm: Action?
     
     // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        viewModel.makeFilmsRequest { [weak self] (message) in
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.makeFilmsRequest(completionBlock: nil, failureBlock: { [weak self] (message) in
             self?.showErrorAlertWith(message)
-        }
+        })
     }
     
     override func registerCells() {
@@ -41,6 +42,15 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     
     override func setupUI() {
         title = "Films.Controller.Title".localized
+    }
+    
+    override func refresh() {
+        viewModel.makeFilmsRequest(completionBlock: { [weak self] in
+            self?.refreshControl.endRefreshing()
+        }, failureBlock: { [weak self] (message) in
+            self?.refreshControl.endRefreshing()
+            self?.showErrorAlertWith(message)
+        })
     }
     
     private func dataSource() -> RxTableViewSectionedReloadDataSource<FilmsSectionModel> {

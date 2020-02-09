@@ -22,12 +22,13 @@ class FilmsViewModel {
         self.provider = provider
     }
     
-    func makeFilmsRequest(failureBlock: @escaping StringAction) {
+    func makeFilmsRequest(completionBlock: Action?, failureBlock: @escaping StringAction) {
         let getFilmsRequest = getFilmsRequestObservable()
         getFilmsRequest.subscribe(onNext: { [weak self] (result) in
             switch result {
             case .success(let films):
                 self?.configureSections(films: films)
+                completionBlock?()
             case .failed(let message):
                 failureBlock(message)
             }
