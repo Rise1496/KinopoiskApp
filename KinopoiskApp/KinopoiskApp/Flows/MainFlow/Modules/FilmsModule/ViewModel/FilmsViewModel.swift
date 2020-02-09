@@ -63,6 +63,7 @@ class FilmsViewModel {
     }
 }
 
+// MARK: - RequestObservable
 extension FilmsViewModel {
     private func getFilmsRequestObservable() -> Observable<GetFilmsRequestResult> {
         return provider.rx.request(.getFilms).map(GetFilmsResponseModel.self).map { model in

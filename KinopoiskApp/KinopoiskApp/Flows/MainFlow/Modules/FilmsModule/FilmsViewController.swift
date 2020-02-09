@@ -20,7 +20,6 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     var onFilm: FilmAction?
     
     // MARK: - Lifecycle
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.makeFilmsRequest(completionBlock: nil, failureBlock: { [weak self] (message) in
@@ -83,6 +82,7 @@ class FilmsViewController: BaseTableViewController, FilmsViewInput, FilmsViewOut
     }
 }
 
+// MARK: - UITableViewDelegate
 extension FilmsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()

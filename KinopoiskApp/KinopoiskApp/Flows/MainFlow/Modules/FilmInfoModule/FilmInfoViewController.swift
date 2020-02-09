@@ -10,8 +10,11 @@ import UIKit
 import Rswift
 
 class FilmInfoViewController: BaseTableViewController, FilmInfoViewInput, FilmInfoViewOutput {
+    
+    // MARK: - FilmInfoViewInput
     var viewModel: FilmInfoViewModel!
     
+    // MARK: - Lifecycle
     override func setupUI() {
         title = viewModel.getTitle()
         tableView.dataSource = self
@@ -25,6 +28,7 @@ class FilmInfoViewController: BaseTableViewController, FilmInfoViewInput, FilmIn
     }
 }
 
+// MARK: - UITableViewDataSource
 extension FilmInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
